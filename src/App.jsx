@@ -1,4 +1,5 @@
 import React from "react";
+import Clase3 from "./components/Clase3";
 
 const App = () => {
   let imagen_producto = "kqX3vl0y.png";
@@ -40,7 +41,7 @@ const App = () => {
           <p>{descripcion}</p>
         </div>
       </div>
-      
+      <Clase3 />
     </div>
   )
 }

@@ -1,0 +1,17 @@
+.cuadro_white {
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.cuadro_dark {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px 0px;
+}
