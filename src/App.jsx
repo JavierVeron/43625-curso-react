@@ -1,47 +1,36 @@
-import React from "react";
-import Clase3 from "./components/Clase3";
+import React, { Children } from "react";
+import Clase4 from "./components/Clase4";
+import Hijo from "./components/Hijo";
+import Navbar from "./components/Navbar";
+import Producto from "./components/Producto";
 
+const Texto = () => {
+  return (
+      <h3>Soy un Texto</h3>
+  )
+}
 const App = () => {
   let imagen_producto = "kqX3vl0y.png";
   let nombre_producto = "Big Mac";
-  let calorias = "505 kcal";
+  let calorias = "545 kcal";
   let descripcion = "Quizás sean las dos hamburguesas de carne 100% vacuna con esa salsa especial y queso derretido, el toque de cebolla y la frescura de la lechuga o el crocante del pepino, lo que la hace la hamburguesa más famosa del mundo. Un sabor único.";
+  const datos_productos = {
+    nombre:nombre_producto,
+    imagen:imagen_producto,
+    calorias:calorias,
+    descripcion:descripcion,
+    precio:1300
+  }
 
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img src="mcdonalds-logo-footer-bg-white.png" alt="Mc Donalds" width="80"></img></a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Productos</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Locales</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">En Familia</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <div className="row">
-        <div className="col-md-4 offset-md-2 text-end d-flex justify-content-end align-items-center">
-          <img src={imagen_producto} alt={nombre_producto} className="img-fluid" />
-        </div>
-        <div className="col-md-4">
-          <h3>{nombre_producto}</h3>
-          <p>{calorias}</p>
-          <p>{descripcion}</p>
-        </div>
-      </div>
-      <Clase3 />
+      {/* <Navbar nombre={"Javier"} apellido={"Verón"} notas={[7, 5, 10]} edad={41} datos={datos_productos} /> */}
+      {/* <Producto imagen={imagen_producto} nombre={nombre_producto} calorias={calorias} descripcion={descripcion}  /> */}
+      {/* <Producto datos={datos_productos}  /> */}
+      {/* <Clase4 /> */}
+      <Hijo nombre="Coderhouse">
+        <Texto />
+      </Hijo>
     </div>
   )
 }
