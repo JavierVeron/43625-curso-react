@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Map = () => {
-    const productos = [
+    const [productos, setProductos] = useState([]);
+ 
+    const arrayProductos = [
         {id:1, name:"Coca Cola", description:"Coca Cola 2.25lts", stock:10, price:350, image:"https://jumboargentina.vtexassets.com/arquivos/ids/441468/Coca-Cola-25-L-3-17483.jpg?v=636528846231600000"},
         {id:2, name:"Pepsi", description:"Pepsi 2.25lts", stock:9, price: 320, image:"https://jumboargentina.vtexassets.com/arquivos/ids/441468/Coca-Cola-25-L-3-17483.jpg?v=636528846231600000"},
         {id:3, name:"Manaos", description:"Manaos 2.25lts", stock:8, price: 300, image:"https://jumboargentina.vtexassets.com/arquivos/ids/441468/Coca-Cola-25-L-3-17483.jpg?v=636528846231600000"},
@@ -13,6 +15,18 @@ const Map = () => {
       ];
 
       //console.log(productos.map(prod => prod.name + " $" + prod.price).join(","));
+      
+      useEffect(() => {
+        const promesa = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(arrayProductos)
+            }, 3000);
+        })
+
+        promesa.then((data) => {
+            setProductos(data);
+        })
+      }, [])
 
     return (
         <div>
