@@ -5,13 +5,14 @@ import Error404 from "./components/Clase7/Error404";
 import Footer from "./components/Clase7/Footer";
 import NavBar from "./components/Clase7/NavBar";
 import Productos from "./components/Clase7/Productos";
+import Abstraccion from "./components/Clase9/Abstraccion";
 
 const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route exact path={"/"} element={<Productos />} />
+        <Route exact path={"/"} element={<Abstraccion />} />
         <Route exact path={"/productos"} element={<Productos />} />
         <Route exact path={"/productos/:id"} element={<Productos />} />
         <Route exact path={"/cart"} element={<Cart />} />
